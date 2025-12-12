@@ -40,19 +40,20 @@
 
     /* ------------------ ID CARD SLIDE DOWN ------------------ */
     .id-card {
-        width: 651px;
-        height: 651px; /* adjust according to your image */
+        width: 90%;       /* scales on small screens */
+        max-width: 844px; /* keeps desktop size */
+        height: auto;     /* maintain aspect ratio */
         display: block;
         margin: auto;
         position: relative;
-        top: 50%;             /* start roughly in middle */
-        transform: translateY(-150%) ; /* move it above viewport */
+        top: -80%;        /* start above view */
         transition: 1.3s ease-out;
     }
 
     .show-card {
-        transform: translateY(-55%); /* slides down to center */
+        top: 0;           /* slides down */
     }
+
 
     /* ------------------ SIDEBAR BUTTONS ------------------ */
     .sidebar {
