@@ -40,19 +40,27 @@
 
     /* ------------------ ID CARD SLIDE DOWN ------------------ */
     .id-card {
-        width: 90%;       /* scales on small screens */
-        max-width: 844px; /* keeps desktop size */
-        height: auto;     /* maintain aspect ratio */
+        width: 651px;
+        height: 651px; /* your desktop image height */
         display: block;
         margin: auto;
         position: relative;
-        top: -80%;        /* start above view */
+        top: -400px;       /* start above viewport */
         transition: 1.3s ease-out;
     }
 
     .show-card {
         top: 0;           /* slides down */
     }
+    /* ------------------ MOBILE FIX ------------------ */
+    @media (max-width: 768px) {
+        .id-card {
+            width: 90%;       /* smaller on phone */
+            height: auto;     /* keep proportion */
+            top: -30%;        /* start a bit above but not too high */
+        }
+    }
+
 
 
     /* ------------------ SIDEBAR BUTTONS ------------------ */
