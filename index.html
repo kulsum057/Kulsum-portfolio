@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Landing Page</title>
+
+<style>
+    /* ------------------ COLOR PALETTE ------------------ */
+    :root {
+        --black: #000000;
+        --blue-main: #21409C;
+        --bg-light: #F4F2FF;
+        --grad-1a: #F4F2FF;
+        --grad1b: #5469A6;
+        --grad2a: #344880;
+        --grad2b: #6578B0;
+    }
+
+    /* ------------------ GLOBAL STYLE ------------------ */
+    body {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(180deg, var(--grad-1a), var(--grad2b));
+        height: 100vh;
+        overflow: hidden;
+        font-family: poppings;
+    }
+
+    /* ------------------ BACKGROUND GRID ------------------ */
+    .grid-bg {
+        position: absolute;
+        inset: 0;
+        background-size: 60px 60px;
+        background-image: 
+            linear-gradient(to right, rgba(255,255,255,0.15) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(255,255,255,0.15) 1px, transparent 1px);
+        opacity: 0.4;
+    }
+
+    /* ------------------ ID CARD SLIDE DOWN ------------------ */
+    .id-card {
+        width: 651px;
+        height: 651px; /* adjust according to your image */
+        display: block;
+        margin: auto;
+        position: relative;
+        top: 50%;             /* start roughly in middle */
+        transform: translateY(-150%) ; /* move it above viewport */
+        transition: 1.3s ease-out;
+    }
+
+    .show-card {
+        transform: translateY(-60%); /* slides down to center */
+    }
+
+    /* ------------------ SIDEBAR BUTTONS ------------------ */
+    .sidebar {
+        position: absolute;
+        right: 40px;
+        top: 120px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .side-btn {
+        width: 55px;
+        height: 55px;
+        background: rgba(255,255,255,0.25);
+        backdrop-filter: blur(5px);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border: 2px solid rgba(255,255,255,0.3);
+        transition: 0.3s;
+    }
+
+    .side-btn:hover {
+        transform: scale(1.1);
+        background: rgba(255,255,255,0.4);
+    }
+
+    .side-btn img {
+        width: 28px;
+        height: 28px;
+    }
+
+</style>
+</head>
+<body>
+
+<div class="grid-bg"></div>
+
+<!-- ------------------ ID CARD ------------------ -->
+<img src="images/idcard-01.png" alt="ID Card" class="id-card" id="idCard">
+<!-- put your ID card image here -->
+
+<!-- ------------------ SIDEBAR BUTTONS ------------------ -->
+<div class="sidebar">
+    <div class="side-btn">
+        <img src="images/home.png" alt="Home"> <!-- put your home button image here -->
+    </div>
+    <div class="side-btn">
+        <img src="images/blueprint (1).png" alt="Projects"> <!-- put your projects button image here -->
+    </div>
+    <div class="side-btn">
+        <img src="images/newspaper.png" alt="Paper"> <!-- put your paper button image here -->
+    </div>
+    <div class="side-btn">
+        <img src="images/about.png" alt="About"> <!-- put your about button image here -->
+    </div>
+    <div class="side-btn">
+        <img src="images/achivement.png" alt="Achievement"> <!-- put your achievement button image here -->
+    </div>
+    <div class="side-btn">
+        <img src="images/email.png" alt="Contact"> <!-- put your contact button image here -->
+    </div>
+</div>
+
+<script>
+    // Animate ID card sliding down
+    window.onload = () => {
+        document.getElementById("idCard").classList.add("show-card");
+    };
+</script>
+
+</body>
+</html>
