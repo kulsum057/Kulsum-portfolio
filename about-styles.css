@@ -1,0 +1,439 @@
+/* ------------------ COLOR PALETTE ------------------ */
+:root {
+    --black: #000000;
+    --blue-main: #21409C;
+    --purple-text: #140058;
+    --bg-light: #F4F2FF;
+    --grad-1a: #A59363;
+    --grad1b: #5469A6;
+    --grad2a: #344880;
+    --grad2b: #435B9D;
+}
+
+/* ------------------ GLOBAL STYLE ------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, var(--grad-1a) 0%, var(--grad2b) 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-family: 'Poppins', sans-serif;
+    width: 1440px;
+    max-width: 100vw;
+}
+
+/* ------------------ BACKGROUND GRID ------------------ */
+.grid-bg {
+    position: fixed;
+    inset: 0;
+    background-size: 60px 60px;
+    background-image:
+        linear-gradient(to right, rgba(255,255,255,0.15) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,0.15) 1px, transparent 1px);
+    opacity: 0.4;
+    z-index: 0;
+}
+
+/* ------------------ MAIN CONTENT ------------------ */
+.about-container {
+    position: relative;
+    z-index: 1;
+    width: 1440px;
+    min-height: 2046px;
+    padding: 0;
+    margin: 0;
+}
+
+/* ------------------ PAGE TITLE ------------------ */
+.page-title {
+    position: absolute;
+    left: 117px;
+    top: 60px;
+    font-size: 64px;
+    font-weight: 600;
+    color: var(--black);
+    opacity: 0;
+    animation: fadeInDown 0.8s ease-out forwards;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ------------------ NAME WITH BLUR ------------------ */
+.name-blur {
+    position: absolute;
+    left: 117px;
+    top: 189px;
+    width: 496px;
+    font-size: 128px;
+    font-weight: 700;
+    color: var(--purple-text);
+    line-height: 128px;
+    filter: blur(1px);
+    opacity: 0;
+    animation: fadeIn 1s ease-out 0.3s forwards;
+}
+
+/* BIBI styling */
+.name-blur .bibi {
+    letter-spacing: 55px;
+}
+
+/* KULSUM styling */
+.name-blur .kulsum {
+    letter-spacing: -10px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* ------------------ ABOUT CONTENT ------------------ */
+.about-content {
+    position: absolute;
+    left: 642px;
+    top: 206px;
+    width: 584px;
+}
+
+.about-text {
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--black);
+    line-height: 32.48px;
+    margin-bottom: 43px;
+    opacity: 0;
+    animation: slideInRight 0.8s ease-out 0.5s forwards;
+}
+
+.about-text:last-child {
+    animation-delay: 0.7s;
+}
+
+.highlight {
+    font-weight: 500;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ------------------ SECTION TITLES ------------------ */
+.section-title {
+    position: absolute;
+    color: var(--purple-text);
+    opacity: 0;
+    animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.section-title-1 {
+    left: 117px;
+    top: 548px;
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 70px;
+    letter-spacing: 3.5px;
+    animation-delay: 0.9s;
+}
+
+.section-title-2 {
+    left: 117px;
+    top: 850px;
+    animation-delay: 1.1s;
+}
+
+.section-title-3 {
+    left: 120px;
+    top: 1152px;
+    animation-delay: 1.3s;
+}
+
+.section-title-4 {
+    left: 120px;
+    top: 1390px;
+    animation-delay: 1.5s;
+}
+
+.section-title-5 {
+    left: 117px;
+    top: 1631px;
+    animation-delay: 1.7s;
+}
+
+.large-text {
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 70px;
+    letter-spacing: 3.5px;
+}
+
+.small-text {
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 45px;
+    letter-spacing: 2.4px;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ------------------ ICON GRIDS ------------------ */
+.icon-grid {
+    position: absolute;
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 25px;
+    opacity: 0;
+    transition: transform 0.3s ease, box-shadow 0.2s ease;
+}
+
+.icon-small {
+    width: 95px;
+    height: 95px;
+}
+
+.icon-social {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    opacity: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effects */
+.icon:hover,
+.icon-social:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.35);
+}
+
+/* Software Grid */
+.software-grid {
+    left: 646px;
+    top: 861px;
+}
+
+.software-grid .icon:nth-child(1) {
+    animation: popIn 0.5s ease-out 1.2s forwards;
+}
+
+.software-grid .icon:nth-child(2) {
+    animation: popIn 0.5s ease-out 1.3s forwards;
+}
+
+.software-grid .icon:nth-child(3) {
+    animation: popIn 0.5s ease-out 1.4s forwards;
+}
+
+.software-grid .icon:nth-child(4) {
+    animation: popIn 0.5s ease-out 1.5s forwards;
+}
+
+.software-grid .icon:nth-child(5) {
+    animation: popIn 0.5s ease-out 1.6s forwards;
+}
+
+.software-grid .icon:nth-child(6) {
+    animation: popIn 0.5s ease-out 1.7s forwards;
+}
+
+/* Programming Grid */
+.programming-grid {
+    left: 645px;
+    top: 1172px;
+}
+
+.programming-grid .icon:nth-child(1) {
+    animation: popIn 0.5s ease-out 1.4s forwards;
+}
+
+.programming-grid .icon:nth-child(2) {
+    animation: popIn 0.5s ease-out 1.5s forwards;
+}
+
+.programming-grid .icon:nth-child(3) {
+    animation: popIn 0.5s ease-out 1.6s forwards;
+}
+
+/* Web Grid */
+.web-grid {
+    left: 649px;
+    top: 1390px;
+}
+
+.web-grid .icon:nth-child(1) {
+    animation: popIn 0.5s ease-out 1.6s forwards;
+}
+
+.web-grid .icon:nth-child(2) {
+    animation: popIn 0.5s ease-out 1.7s forwards;
+}
+
+.web-grid .icon:nth-child(3) {
+    animation: popIn 0.5s ease-out 1.8s forwards;
+}
+
+/* Social Grid */
+.social-grid {
+    left: 646px;
+    top: 1639px;
+    gap: 35px;
+}
+
+.social-grid .icon-social:nth-child(1) {
+    animation: popIn 0.5s ease-out 1.8s forwards;
+}
+
+.social-grid .icon-social:nth-child(2) {
+    animation: popIn 0.5s ease-out 1.9s forwards;
+}
+
+.social-grid .icon-social:nth-child(3) {
+    animation: popIn 0.5s ease-out 2s forwards;
+}
+
+.social-grid .icon-social:nth-child(4) {
+    animation: popIn 0.5s ease-out 2.1s forwards;
+}
+
+.social-grid .icon-social:nth-child(5) {
+    animation: popIn 0.5s ease-out 2.2s forwards;
+}
+
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ------------------ SIDEBAR BUTTONS ------------------ */
+.sidebar {
+    position: fixed;
+    top: 120px;
+    right: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    z-index: 10;
+}
+
+.side-btn {
+    width: 55px;
+    height: 55px;
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(5px);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Gradient border effect for sidebar buttons */
+.side-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    padding: 2px;
+    background: linear-gradient(180deg, #5469A6 0%, #140058 100%);
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.side-btn:hover {
+    transform: scale(1.1);
+    background: rgba(255,255,255,0.4);
+}
+
+.side-btn img {
+    width: 28px;
+    height: 28px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ------------------ MOBILE FIX ------------------ */
+@media (max-width: 768px) {
+    .id-card {
+        width: 90%;
+        height: auto;
+        top: -30%;
+    }
+    
+    .sidebar {
+        right: 20px;
+        top: 80px;
+        gap: 15px;
+    }
+    
+    .side-btn {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .side-btn img {
+        width: 22px;
+        height: 22px;
+    }
+}

@@ -1,0 +1,195 @@
+/* ------------------ COLOR PALETTE ------------------ */
+:root {
+    --black: #000000;
+    --blue-main: #21409C;
+    --bg-light: #F4F2FF;
+    --grad-1a: #A59363;
+    --grad1b: #5469A6;
+    --grad2a: #344880;
+    --grad2b: #6578B0;
+}
+
+/* ------------------ GLOBAL STYLE ------------------ */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, var(--grad-1a), var(--grad2b));
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ------------------ BACKGROUND GRID ------------------ */
+.grid-bg {
+    position: absolute;
+    inset: 0;
+    background-size: 60px 60px;
+    background-image:
+        linear-gradient(to right, rgba(255,255,255,0.15) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,0.15) 1px, transparent 1px);
+    opacity: 0.4;
+}
+
+/* ------------------ ID CARD SLIDE DOWN ------------------ */
+.id-card {
+    width: 651px;
+    height: 651px;
+    display: block;
+    margin: auto;
+    position: relative;
+    top: -400px;
+    transition: top 1.3s ease-out;
+}
+
+.show-card {
+    top: -2px;
+}
+
+/* ------------------ DOWNLOAD BUTTON ------------------ */
+.download-btn {
+
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(84, 105, 166, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    padding: 18px 45px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    transition: all 0.3s ease;
+    z-index: 10;
+    
+}
+
+/* Gradient border effect for download button */
+.download-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50px;
+    padding: 2px;
+    background: linear-gradient(180deg, #5469A6 0%, #140058 100%);
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.download-btn:hover {
+    background: rgba(84, 105, 166, 0.5);
+    transform: translateX(-50%) scale(1.05);
+}
+
+.download-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.download-btn span {
+    color: #000000;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* ------------------ SIDEBAR BUTTONS ------------------ */
+.sidebar {
+    position: absolute;
+    right: 40px;
+    top: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    z-index: 10;
+}
+
+.side-btn {
+    width: 55px;
+    height: 55px;
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(5px);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Gradient border effect for sidebar buttons */
+.side-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    padding: 2px;
+    background: linear-gradient(180deg, #5469A6 0%, #140058 100%);
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.side-btn:hover {
+    transform: scale(1.1);
+    background: rgba(255,255,255,0.4);
+}
+
+.side-btn img {
+    width: 28px;
+    height: 28px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ------------------ MOBILE FIX ------------------ */
+@media (max-width: 768px) {
+    .id-card {
+        width: 90%;
+        height: auto;
+        top: -30%;
+    }
+    
+    .sidebar {
+        right: 20px;
+        top: 80px;
+        gap: 15px;
+    }
+    
+    .side-btn {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .side-btn img {
+        width: 22px;
+        height: 22px;
+    }
+    
+    .download-btn {
+        bottom: 40px;
+        padding: 15px 35px;
+    }
+    
+    .download-btn span {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,295 @@
+/* ------------------ COLOR PALETTE ------------------ */
+:root {
+    --black: #000000;
+    --blue-main: #6881cd;
+    --purple-text: #140058;
+    --bg-light: #F4F2FF;
+    --grad-1a: #A59363;
+    --grad1b: #5469A6;
+    --grad2a: #344880;
+    --grad2b: #435B9D;
+}
+
+/* ------------------ GLOBAL STYLE ------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, var(--grad-1a) 0%, var(--grad2b) 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-family: 'Poppins', sans-serif;
+    width: 1440px;
+    max-width: 100vw;
+}
+
+/* ------------------ BACKGROUND GRID ------------------ */
+.grid-bg {
+    position: fixed;
+    inset: 0;
+    background-size: 60px 60px;
+    background-image:
+        linear-gradient(to right, rgba(255,255,255,0.15) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,0.15) 1px, transparent 1px);
+    opacity: 0.4;
+    z-index: 0;
+}
+
+/* ------------------ MAIN CONTENT ------------------ */
+.achievement-container {
+    position: relative;
+    z-index: 1;
+    width: 1440px;
+    min-height: 2400px;
+    padding: 0 104px 100px 104px;
+    margin: 0;
+}
+
+/* ------------------ PAGE TITLE ------------------ */
+.page-title {
+    position: absolute;
+    left: 104px;
+    top: 60px;
+    font-size: 64px;
+    font-weight: 600;
+    color: var(--black);
+    opacity: 0;
+    animation: fadeInDown 0.8s ease-out forwards;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ------------------ ACHIEVEMENT ITEMS ------------------ */
+.achievement-item {
+    position: absolute;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    opacity: 0;
+}
+
+.left-col {
+    left: 119px;
+    animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.right-col {
+    left: 710px;
+    animation: slideInRight 0.6s ease-out forwards;
+}
+
+/* Achievement icon circle */
+.achievement-icon {
+    width: 71px;
+    height: 71px;
+    min-width: 71px;
+    background: var(--blue-main);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--grad1b);
+    box-shadow: inset 3px 3px 0px -3px rgba(39, 72, 206, 0.50);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.achievement-icon:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.achievement-icon img {
+    width: 39px;
+    height: 39px;
+}
+
+/* Achievement content */
+.achievement-content {
+    flex: 1;
+    max-width: 467px;
+}
+
+.year {
+    color: var(--purple-text);
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.achievement-title {
+    color: var(--black);
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.achievement-desc {
+    color: var(--black);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.achievement-desc strong {
+    font-weight: 600;
+}
+
+/* Position each item */
+.item-1 { top: 222px; animation-delay: 0.2s; }
+.item-2 { top: 222px; animation-delay: 0.3s; }
+.item-3 { top: 473px; animation-delay: 0.4s; }
+.item-4 { top: 473px; animation-delay: 0.5s; }
+.item-5 { top: 724px; animation-delay: 0.6s; }
+.item-6 { top: 724px; animation-delay: 0.7s; }
+.item-7 { top: 975px; animation-delay: 0.8s; }
+.item-8 { top: 975px; animation-delay: 0.9s; }
+.item-9 { top: 1226px; animation-delay: 1s; }
+.item-10 { top: 1226px; animation-delay: 1.1s; }
+.item-11 { top: 1585px; animation-delay: 1.2s; }
+.item-12 { top: 1585px; animation-delay: 1.3s; }
+.item-13 { top: 1836px; animation-delay: 1.4s; }
+.item-14 { top: 1836px; animation-delay: 1.5s; }
+.item-15 { top: 2087px; animation-delay: 1.6s; }
+.item-16 { top: 2087px; animation-delay: 1.7s; }
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ------------------ SECTION DIVIDER ------------------ */
+.section-divider {
+    position: absolute;
+    left: 117px;
+    top: 1406px;
+    width: 885px;
+    font-size: 48px;
+    font-weight: 500;
+    color: var(--black);
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out 1.1s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* ------------------ SIDEBAR BUTTONS ------------------ */
+.sidebar {
+    position: fixed;
+    top: 120px;
+    right: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    z-index: 10;
+}
+
+.side-btn {
+    width: 55px;
+    height: 55px;
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(5px);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Gradient border effect for sidebar buttons */
+.side-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    padding: 2px;
+    background: linear-gradient(180deg, #5469A6 40%, #140058 100%);
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.side-btn:hover {
+    transform: scale(1.1);
+    background: rgba(255,255,255,0.4);
+}
+
+.side-btn img {
+    width: 28px;
+    height: 28px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ------------------ MOBILE FIX ------------------ */
+@media (max-width: 768px) {
+    .id-card {
+        width: 90%;
+        height: auto;
+        top: -30%;
+    }
+    
+    .sidebar {
+        right: 20px;
+        top: 80px;
+        gap: 15px;
+    }
+    
+    .side-btn {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .side-btn img {
+        width: 22px;
+        height: 22px;
+    }
+    
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Portfolio</title>
+
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="contact-styles.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Background grid effect -->
+    <div class="grid-bg"></div>
+
+    <!-- Main content container -->
+    <div class="contact-container">
+        
+        <!-- Page Title -->
+        <h1 class="page-title">CONTACT</h1>
+
+        <!-- Left Side Content -->
+        <div class="contact-left">
+            <h2 class="contact-heading">Let's write each other</h2>     
+            <!-- Contact Form -->
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="subject" name="subject" placeholder="Subject" value="Let's Connect!" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </div>
+
+        <!-- ID Card - Right Side (slides down) -->
+        <div class="id-card-container">
+            <img src="images/idcard-01.png" alt="ID Card" class="id-card-image">
+        </div>
+
+    </div>
+
+    <!-- Sidebar with rounded background -->
+    <div class="sidebar-bg"></div>
+    
+    <!-- Sidebar navigation buttons -->
+     <div class="sidebar">
+        <div class="side-btn">
+            <a href="index.html">
+            <img src="images/home (2).png" alt="Home">
+            </a>
+        </div>
+        <div class="side-btn">
+            <a href="work.html">
+            <img src="images/blueprint (2).png" alt="Projects">
+            </a>
+        </div>
+        <div class="side-btn">
+            <a href="papers.html">
+            <img src="images/newspaper (1).png" alt="Resume">
+            </a>
+        </div>
+        <div class="side-btn">
+            <a href="about.html">
+            <img src="images/about (1).png" alt="About">
+            </a>
+        </div>
+        <div class="side-btn">
+            <a href="achievement.html">
+            <img src="images/trophy.png" alt="Achievement">
+            </a>
+        </div>
+        <div class="side-btn">
+            <a href="contact.html">
+            <img src="images/mail.png" alt="Contact">
+            </a>
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="contact-script.js"></script>
+</body>
+</html>
