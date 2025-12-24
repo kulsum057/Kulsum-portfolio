@@ -1,6 +1,4 @@
-Purpose
-This portfolio is a place where I share my work, skills, and creative journey. It’s built to showcase my design projects, achievements, and interests, and to make it easy for people to connect or collaborate with me.
-# 👋 Hi, I’m Bibi Kulsum
+# Hi, I’m Bibi Kulsum
 
 **Designer | CSE Student | Creative Thinker**
 
@@ -9,15 +7,21 @@ From logos and social media visuals to full brand identity and UI/UX—if it nee
 
 ---
 
-## 🪪 ID Card
-- **Name:** Bibi Kulsum  
-- **Role:** Designer  
-- **Status:** CSE Student, 3rd Semester, IIUC  
-- **Tools:** Adobe Illustrator, Photoshop, Figma, Spline  
+## Purpose
+This portfolio is a place where I share my work, skills, and creative journey. It’s built to showcase my design projects, achievements, and interests, and to make it easy for people to connect or collaborate with me.
+
 
 ---
 
-## 🎨 My Work
+## ID Card
+- **Name:** Bibi Kulsum  
+- **Role:** Designer  
+- **Status:** CSE Student, 3rd Semester, IIUC  
+- **Design Tools:** Adobe Illustrator, Photoshop, Figma, Spline  
+
+---
+
+## My Work
 - Social Media & Marketing Design  
 - Visual Identity & Branding  
 - UI/UX Design  
@@ -25,12 +29,20 @@ From logos and social media visuals to full brand identity and UI/UX—if it nee
 
 ---
 
-## 📄 Papers
+##  Portfolio & Design Work
+You can explore my design projects and case studies here:
+
+🔗 **Figma Portfolio:**  
+*[https://www.figma.com/proto/psMHxgkbZcFG3W7y4AeEhM/Portfolio?page-id=0%3A1&node-id=1-2165&p=f&viewport=45%2C344%2C0.05&t=5mbH1jXXWSHpVqag-1&scaling=scale-down&content-scaling=fixed]*
+
+---
+
+## Papers
 *Yet to publish…*
 
 ---
 
-## 🙋 About Me
+## About Me
 I’ve been in love with art since I was **15**.  
 In the last **1 year**, I’ve worked on:
 - **3 UI/UX projects**
@@ -41,7 +53,7 @@ At this point, this isn’t just a hobby anymore—it’s something I genuinely 
 
 ---
 
-## 🛠️ Skills & Tools
+## Skills & Tools
 
 ### Creative Software
 - Figma  
@@ -63,7 +75,7 @@ At this point, this isn’t just a hobby anymore—it’s something I genuinely 
 
 ---
 
-## 🏆 Achievements
+## Achievements
 
 ### 2024
 - **Top 50 Teams** – NASA Space Apps Challenge 2024  
@@ -81,7 +93,7 @@ At this point, this isn’t just a hobby anymore—it’s something I genuinely 
 
 ---
 
-## 🎓 Scholarships & Academic Excellence
+## Scholarships & Academic Excellence
 - **2016, 2019 & 2022** – BDT 100,000 Scholarship (Probashi Kallyan Organization)  
 - **HSC 2023** – GPA 4.75  
 - **SSC 2021** – GPA 5.00  
@@ -91,7 +103,7 @@ At this point, this isn’t just a hobby anymore—it’s something I genuinely 
 
 ---
 
-## 🌐 Connect With Me
+## Connect With Me
 - LinkedIn  
 - Facebook  
 - Behance  
@@ -100,9 +112,6 @@ At this point, this isn’t just a hobby anymore—it’s something I genuinely 
 
 ---
 
-## 📬 Contact
+## Contact
 **Let’s write each other.**  
-You can start—because I don’t have your email yet 😉  
-I’ve already pre-filled the subject line. Looking forward!
-
-👉 **Mail me**
+You can start—because I don’t have your email yet :)  
